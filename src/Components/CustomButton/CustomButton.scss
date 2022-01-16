@@ -1,0 +1,29 @@
+.custom__button {
+  width: 230px;
+  height: 50px;
+  font-family: "Roboto", sans-serif;
+  color: #ffffff;
+  background-color: #8add37;
+  border-radius: 25px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  &:disabled {
+    background-color: #e5e5e5;
+    color: #b3b3b3;
+    cursor: not-allowed;
+  }
+
+  .button__content {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+  }
+}
+
+.modal__button {
+  margin-top: 40px;
+  width: 178px;
+}

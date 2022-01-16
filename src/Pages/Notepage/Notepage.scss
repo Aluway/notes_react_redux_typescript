@@ -1,0 +1,49 @@
+.notepage__container {
+  position: relative;
+  box-sizing: border-box;
+  max-width: 1060px;
+  padding: 80px 20px 0;
+  margin: 0 auto;
+  border-bottom: 1px solid #edeef2;
+  .back__icon {
+    position: absolute;
+    top: 36px;
+  }
+
+  .button__icon {
+    fill: #ffffff;
+  }
+
+  .notepage__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .notepage__title {
+      font-size: 40px;
+      color: #333333;
+    }
+  }
+
+  .notepage__comments {
+    margin-top: 50px;
+    width: 375px;
+    font-size: 20px;
+    color: #70758f;
+    word-wrap: break-word;
+  }
+
+  .notepage__footer {
+    margin: 32px auto 40px;
+    display: flex;
+    justify-content: space-between;
+    color: #a1a4b5;
+  }
+
+  .notepage__icon {
+    cursor: pointer;
+    fill: #dadada;
+    &:hover {
+      fill: #84b61a;
+    }
+  }
+}

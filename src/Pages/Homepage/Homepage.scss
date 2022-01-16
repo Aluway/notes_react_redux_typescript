@@ -1,0 +1,27 @@
+.homepage__container {
+  max-width: 1060px;
+  margin: 0 auto;
+  padding: 80px 20px;
+
+  .button__icon {
+    fill: #ffffff;
+  }
+
+  .homepage__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+  }
+
+  .homepage__header {
+    font-size: 40px;
+    color: #333333;
+  }
+  .notes__wrapper {
+    margin-top: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}

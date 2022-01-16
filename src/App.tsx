@@ -1,25 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import ReactDOM from "react-dom";
+
+import { useSelector } from "react-redux";
+import { RootState } from "./Store/reducers/rootReducer";
+
+import AddNoteModal from "./Components/AddNoteModal/AddNoteModal";
+import Homepage from "./Pages/Homepage/Homepage";
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import Notepage from "./Pages/Notepage/Notepage";
 
 function App() {
+  const showModal = useSelector((state: RootState) => state.modal);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      {showModal &&
+        ReactDOM.createPortal(
+          <AddNoteModal />,
+          document.getElementById("modal")!
+        )}
+      <Routes>
+        <Route element={<Homepage />} path="/" />
+        <Route element={<Notepage />} path="/note/:noteId" />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

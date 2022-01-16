@@ -1,0 +1,135 @@
+.modal__wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(69, 74, 99, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  .modal__container {
+    position: relative;
+    display: block;
+    width: 470px;
+    height: 530px;
+    background-color: #ffffff;
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.16);
+    z-index: 2;
+
+    .modal__icon {
+      fill: #e5e5e5;
+      cursor: pointer;
+      &:hover {
+        fill: #84b61a;
+      }
+    }
+
+    .modal__close {
+      position: absolute;
+      top: 25px;
+      right: 25px;
+    }
+
+    .modal__info__wrapper {
+      margin: 0 auto;
+      padding-top: 50px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      .info__text {
+        font-size: 24px;
+        font-weight: 500;
+      }
+    }
+
+    .modal__content__wrapper {
+      margin: 0 auto;
+      padding-top: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 340px;
+
+      .modal__title {
+        font-size: 24px;
+        font-weight: 500;
+        color: #1f242a;
+      }
+      .modal__panel__wrapper {
+        margin: 0;
+        margin-top: 60px;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        width: 100%;
+        height: 30px;
+        border-bottom: 1px solid #edeef2;
+      }
+
+      .panel__element {
+        &:last-child {
+          margin-left: auto;
+        }
+      }
+
+      label,
+      input,
+      textarea {
+        font-family: "Roboto", sans-serif;
+        font-size: 15px;
+        width: 100%;
+        display: block;
+      }
+
+      input,
+      textarea {
+        margin-top: 10px;
+        background-color: #f8f8f8;
+        border: none;
+        border-radius: 25px;
+        margin-top: 10px;
+        box-sizing: border-box;
+        padding: 16px;
+        &::placeholder {
+          font-family: "Roboto", sans-serif;
+          font-weight: 300;
+        }
+      }
+
+      .header__input {
+        margin-top: 30px;
+        color: #999999;
+
+        input {
+          height: 50px;
+        }
+      }
+
+      .comments__input {
+        margin-top: 24px;
+        color: #999999;
+
+        textarea {
+          min-height: 85px;
+          resize: none;
+          &::-webkit-scrollbar {
+            width: 0;
+            background: transparent;
+          }
+        }
+      }
+    }
+  }
+
+  .submitted {
+    height: 230px;
+  }
+}
